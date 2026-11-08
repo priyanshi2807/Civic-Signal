@@ -1,0 +1,23 @@
+Add `render_template, redirect, url_for` to Flask imports. Inside `create_app()`, before the JSON API routes, add:
+
+    @app.get('/')
+    def home():
+        if current_user.is_authenticated:
+            return redirect(url_for('dashboard'))
+        return render_template('index.html')
+
+    @app.get('/login')
+    def login_page():
+        return render_template('login.html')
+
+    @app.get('/register')
+    def register_page():
+        return render_template('register.html')
+
+    @app.get('/dashboard')
+    @login_required
+    def dashboard():
+        page = {'citizen':'citizen.html','staff':'staff.html','admin':'admin.html'}.get(current_user.role)
+        return render_template(page or 'login.html', user_name=current_user.full_name)
+
+Replace the existing `home()` JSON route with the first route above; do not leave two routes registered for `/`.
