@@ -3,8 +3,8 @@
 CivicSignal is a civic issue reporting and resolution-verification application.
 
 ## Team
-- Student 1: [Name / Roll Number]
-- Student 2: [Name / Roll Number]
+- Student 1: [Name: Priyanshi Nigam / UID-25lbcs3054]
+- Student 2: [Name: Shaan Srivastava / UID-25lbcs3026]
 
 ## Stack
 - Frontend: HTML, CSS, JavaScript, Bootstrap (UI implementation milestone)
