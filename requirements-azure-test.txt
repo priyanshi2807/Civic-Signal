@@ -1,0 +1,3 @@
+# Add these to requirements.txt for Azure Blob evidence uploads and tests
+azure-storage-blob==12.24.0
+pytest==8.3.4
